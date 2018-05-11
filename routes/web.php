@@ -11,6 +11,17 @@
 |
 */
 
+
+/*
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+Route::group(['prefix' => 'admin'], function (){
+   Route::get('/', function (){
+      return view('admin.dashboard');
+   });
+   Route::resource('articles', 'ArticlesController');
+   Route::resource('images', 'ImagesController');
 });
