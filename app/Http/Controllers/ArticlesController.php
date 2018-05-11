@@ -21,7 +21,7 @@ class ArticlesController extends Controller
 
     public function show(Article $article)
     {
-        return view('admin.articles.show');
+        return view('admin.articles.show', ['article' => $article]);
     }
 
     public function store(Request $request)
@@ -37,5 +37,18 @@ class ArticlesController extends Controller
 
         return back()->with('message', 'Статья добавлена');
 
+    }
+
+    public function edit(Article $article)
+    {
+        $id = $article->id;
+        $article = Article::find($id);
+        return view('admin.articles.edit', ['article' => $article]);
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+        return back()->with('message', 'Статья удалена');
     }
 }
