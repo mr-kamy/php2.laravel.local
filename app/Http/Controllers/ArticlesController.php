@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\Resource;
 
 class ArticlesController extends Controller
 {
@@ -44,6 +45,17 @@ class ArticlesController extends Controller
         $id = $article->id;
         $article = Article::find($id);
         return view('admin.articles.edit', ['article' => $article]);
+    }
+
+    public function update(Request $request, Article $article)
+    {
+        request()->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+        $article->update($request->all());
+        return back()->with('message', 'Успешно');
+
     }
 
     public function destroy(Article $article)

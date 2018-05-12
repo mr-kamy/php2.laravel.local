@@ -1,5 +1,12 @@
 @extends('admin.main')
 @section('content')
+
+    @if ($errors->any())
+        @foreach($errors->all() as $error)
+            {{$error}}
+        @endforeach
+    @endif
+
     <form method="post" action="{{action('ArticlesController@store')}}">
         Название статьи:<br>
         <input type="text" name="title"><br>

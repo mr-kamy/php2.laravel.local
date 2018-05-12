@@ -19,7 +19,7 @@
                 <td>
                     <form method="POST" action="{{action('ArticlesController@destroy',['articles'=>$article->id])}}">
                         <input type="hidden" name="_method" value="delete"/>
-                        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+                        @csrf
                         <button>Удалить</button>
                     </form>
                 </td>

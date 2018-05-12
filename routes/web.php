@@ -23,5 +23,8 @@ Route::group(['prefix' => 'admin'], function (){
       return view('admin.dashboard');
    });
    Route::resource('articles', 'ArticlesController');
-   Route::resource('images', 'ImagesController');
+
+   Route::get('gallery', 'ImagesController@index');
+   Route::post('gallery', 'ImagesController@upload');
+   Route::delete('gallery/{id}', 'ImagesController@destroy');
 });
