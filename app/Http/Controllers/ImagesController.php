@@ -24,7 +24,7 @@ class ImagesController extends Controller
         $input['title'] = $request->title;
         Image::create($input);
         return back()
-            ->with('message', 'Успешно');
+            ->with('message', 'Изображение добавлено');
 
     }
 
@@ -34,6 +34,6 @@ class ImagesController extends Controller
         unlink(public_path('images') . '/' . $image->image);
         $image->delete();
         return back()
-            ->with('message', 'Успешное удаление');
+            ->with('message', 'Изображение удалено');
     }
 }
