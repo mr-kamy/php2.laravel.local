@@ -27,7 +27,6 @@
     </div>
     <form method="post" action="{{action('ArticlesController@store')}}">
         @csrf
-        @method('PUT')
         Название статьи:<br>
         <input type="text" class="form-control" placeholder="Заголовок" name="title"><br>
         Текст статьи:<br>
