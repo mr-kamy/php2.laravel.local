@@ -12,11 +12,9 @@
 */
 
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+
+Route::get('/', 'FrontController@index');
+
 
 Route::group(['prefix' => 'admin'], function (){
    Route::get('/', function (){
