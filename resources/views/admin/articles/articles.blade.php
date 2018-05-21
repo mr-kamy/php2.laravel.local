@@ -1,4 +1,5 @@
 @extends('admin.main')
+@section('pageTitle', 'Статьи')
 @section('content')
     @if (Session::get('message'))
         <div class="alert alert-success">
@@ -41,4 +42,5 @@
             </tr>
         @endforeach
     </table>
+    {{$articles->links()}}
 @endsection

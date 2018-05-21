@@ -1,4 +1,5 @@
 @extends('admin.main')
+@section('pageTitle', $article->title)
 @section('content')
     @if (Session::get('message'))
         <div class="alert alert-success">

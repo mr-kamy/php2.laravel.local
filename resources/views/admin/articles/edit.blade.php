@@ -1,4 +1,5 @@
 @extends('admin.main')
+@section('pageTitle', 'Редактирование статьи')
 @section('content')
     @if(count($errors) > 0)
         <div class="alert alert-danger">

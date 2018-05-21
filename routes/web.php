@@ -14,6 +14,7 @@
 
 
 Route::get('/', 'FrontController@index');
+Route::get('/gallery', 'GalleryController@index');
 
 
 Route::group(['prefix' => 'admin'], function (){
@@ -26,3 +27,7 @@ Route::group(['prefix' => 'admin'], function (){
    Route::post('gallery', 'ImagesController@upload');
    Route::delete('gallery/{id}', 'ImagesController@destroy');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

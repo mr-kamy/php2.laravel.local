@@ -5,9 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/images/28.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Admin</title>
+    <style type="text/css">
+        .form-upload {
+            padding: 15px;
+            background: #9fcdff;
+        }
+
+        .gallery {
+            padding-top: 20px;
+            background: #cce5ff;
+        }
+    </style>
+    <title>Admin @yield('pageTitle')</title>
 </head>
 <body>
 <div class="container">@yield('content')</div>

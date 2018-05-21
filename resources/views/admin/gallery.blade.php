@@ -29,9 +29,9 @@
         @if(count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
                 </ul>
             </div>
         @endif
@@ -80,8 +80,14 @@
                     </div>
 
                 @endforeach
-            @endif
         </div>
+        <div class="row">
+            <div class="text-align">
+                {{$images->links()}}
+            </div>
+        </div>
+        @endif
+
     </div>
 </div>
 

@@ -9,7 +9,7 @@ class ImagesController extends Controller
 {
     public function index()
     {
-        $images = Image::get();
+        $images = Image::paginate(9);
         return view('admin.gallery', ['images' => $images]);
     }
 
