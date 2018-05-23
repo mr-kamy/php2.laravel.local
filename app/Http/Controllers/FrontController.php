@@ -12,4 +12,9 @@ class FrontController extends Controller
         $articles = Article::paginate(5);
         return view('site.index', ['articles' => $articles]);
     }
+
+    public function show(Article $article)
+    {
+        return view('site.article', ['article' => $article]);
+    }
 }

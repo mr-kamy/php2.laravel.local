@@ -6,6 +6,5 @@
 </ul>
 <h2>Изображения</h2>
 <ul>
-    <li><a href="/admin/images">Все изображения</a> </li>
-    <li><a href="/admin/images/create">Добавить изображение</a> </li>
+    <li><a href="/admin/gallery">Все изображения</a> </li>
 </ul>
