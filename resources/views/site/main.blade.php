@@ -13,7 +13,7 @@
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -30,7 +30,7 @@
                 </li>
                 @if(Auth::check())
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Админка</a>
+                            <a class="nav-link disabled" href="/admin">Админка</a>
                         </li>
                 @endif
             </ul>
